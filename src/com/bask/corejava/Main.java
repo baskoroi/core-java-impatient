@@ -7,6 +7,7 @@ package com.bask.corejava;
 
 //import com.bask.corejava.ch2.CalendarPrinter;
 import com.bask.corejava.ch2.Exercise4;
+import com.bask.corejava.ch2.Point;
 import org.omg.CORBA.IntHolder;
 
 /**
@@ -19,11 +20,20 @@ public class Main {
 //        CalendarPrinter cp = new CalendarPrinter(true, 1995, 7);
 //        cp.printCalendar();
 
-        IntHolder i1 = new IntHolder(17);
-        IntHolder i2 = new IntHolder(5);
+//        IntHolder i1 = new IntHolder(17);
+//        IntHolder i2 = new IntHolder(5);
+//        
+//        Exercise4.intHolderSwap(i1, i2);
+//        System.out.println(i1.value);
+//        System.out.println(i2.value);
+
+        Point pOld = new Point(3, 4);
+        Point p = pOld.translate(1, 3).scale(0.5);
         
-        Exercise4.intHolderSwap(i1, i2);
-        System.out.println(i1.value);
-        System.out.println(i2.value);
+        System.out.println(pOld.getX());
+        System.out.println(pOld.getY());
+        
+        System.out.println(p.getX());
+        System.out.println(p.getY());
     }
 }

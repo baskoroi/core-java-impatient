@@ -14,7 +14,7 @@ public class Exercise2 {
      * it is invoked, while a mutator method does.
      * 
      * Therefore,
-     * <code>Scanner.nextInt()</code> is an accessor.
-     * <code>Random.nextInt()</code> is an accessor.
+     * <code>Scanner.this.nextInt()</code> is an accessor.
+     * <code>Random.this.nextInt()</code> is an accessor.
      */
 }
