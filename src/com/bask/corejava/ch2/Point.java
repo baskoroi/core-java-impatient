@@ -46,5 +46,15 @@ public class Point {
     public Point scale(double s) {
         return new Point(this.x * s, this.y * s);
     }
+    
+    public void translateMutably(double dx, double dy) {
+        this.x += dx;
+        this.y += dy;
+    }
+    
+    public void scaleMutably(double s) {
+        this.x *= s;
+        this.y *= s;
+    }
         
 }

@@ -17,16 +17,6 @@ import org.omg.CORBA.IntHolder;
 public class Main {
     
     public static void main(String[] args) {
-//        CalendarPrinter cp = new CalendarPrinter(true, 1995, 7);
-//        cp.printCalendar();
-
-//        IntHolder i1 = new IntHolder(17);
-//        IntHolder i2 = new IntHolder(5);
-//        
-//        Exercise4.intHolderSwap(i1, i2);
-//        System.out.println(i1.value);
-//        System.out.println(i2.value);
-
         Point pOld = new Point(3, 4);
         Point p = pOld.translate(1, 3).scale(0.5);
         
@@ -35,5 +25,12 @@ public class Main {
         
         System.out.println(p.getX());
         System.out.println(p.getY());
+        
+        pOld.translateMutably(1, 3);
+        pOld.scaleMutably(0.5);
+        
+        // check whether the mutator methods have worked: yes
+        System.out.println(pOld.getX());
+        System.out.println(pOld.getY());
     }
 }
