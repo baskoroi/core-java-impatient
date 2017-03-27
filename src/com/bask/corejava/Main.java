@@ -6,9 +6,7 @@
 package com.bask.corejava;
 
 //import com.bask.corejava.ch2.CalendarPrinter;
-import com.bask.corejava.ch2.Exercise4;
-import com.bask.corejava.ch2.Point;
-import org.omg.CORBA.IntHolder;
+import com.bask.corejava.ch2.Car;
 
 /**
  * Main class for other classes in the exercise.
@@ -17,20 +15,20 @@ import org.omg.CORBA.IntHolder;
 public class Main {
     
     public static void main(String[] args) {
-        Point pOld = new Point(3, 4);
-        Point p = pOld.translate(1, 3).scale(0.5);
+        Car car = new Car(23.6);
+        System.out.println("Fuel #1: " + car.getFuel());
+        System.out.println("Mileage #1: " + car.getMileage());
         
-        System.out.println(pOld.getX());
-        System.out.println(pOld.getY());
+        car.travel(200);
+        System.out.println("Fuel #2: " + car.getFuel());
+        System.out.println("Mileage #2: " + car.getMileage());
         
-        System.out.println(p.getX());
-        System.out.println(p.getY());
+        car.refuel(10);
+        System.out.println("Fuel #3: " + car.getFuel());
+        System.out.println("Mileage #3: " + car.getMileage());
         
-        pOld.translateMutably(1, 3);
-        pOld.scaleMutably(0.5);
-        
-        // check whether the mutator methods have worked: yes
-        System.out.println(pOld.getX());
-        System.out.println(pOld.getY());
+        car.travel(300);
+        System.out.println("Fuel #4: " + car.getFuel());
+        System.out.println("Mileage #4: " + car.getMileage());
     }
 }
